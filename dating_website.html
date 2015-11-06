@@ -3,17 +3,27 @@
     <head>
         <h1> Please Enter Your Details For Our Dating Website</h1>
     </head>
+    <style>
+        fieldset {background: lightyellow; border: 10px solid yellow; margin-bottom: 10px; width: 720px}
+        label {width: 180px; display:inline-block; text-align: right; text-align: top}
+        label:hover { font-size:20px }
+        input:hover { font-size:20px }
+        textarea {width: 360px; height: 50px}
+        .range {text-align: center}
+        .tick {width: auto}
+    </style>
     <body>
         <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method=post enctype="multipart/form-data">
             <fieldset>
                 <legend>Your Face</legend>
                 <label for="file">Your Image:</label><input type="file" name="fileToUpload" required></br></br>
-                <label for="preview" id="preview">Image Preview:</label>
+                <label for="preview">Image Preview: <img id="preview"></label>
             </fieldset></br>
             <fieldset>
                 <legend>Your General Details</legend>
                 <label for="name">Name:</label> <input type="text" placeholder="Your Full Name" required></br></br>
-                <label for="gender">Gender: </label><input type="radio" name="gender" value="male" required> Male <input type="radio" name="gender" value="female" required> Female</br></br>
+                <label for="gender">Gender: </label>
+                <label for="radio"><input type="radio" name="gender" value="male" required> Male <input type="radio" name="gender" value="female" required> Female</label></br></br>
                 <label for="age">Age: </label><input type="number" name="age" required></br></br>
                 <label for="date">Date of birth: </label><input type="date" name = "date" placeholder="dd/mm/yy"></br></br>
                 <label for="color">Favourite color: </label><input type= "color" name="color>"</br></br></br>
@@ -30,8 +40,8 @@
             </fieldset></br>
             <fieldset>
                 <legend>Your Indicators</legend>
-                <label for="height">Height: </label>Short<input type="range" min="0" max="100" name="height"> Tall</br></br>
-                <label for="salary">Salary: </label>Poor<input type="range" min="0" max="100" name="salary"> Rich</br></br>
+                <label for="height">Height: </label>Short<input type="range" min="0" max="100" name="height">Tall</br></br>
+                <label for="salary">Salary: </label>Poor<input type="range" min="0" max="100" name="salary">Rich</br></br>
             </fieldset></br>
             <fieldset>
                 <legend>Your Contact Information</legend>
@@ -46,5 +56,6 @@
             </fieldset></br>
         <input type="submit" value="Submit">    
         </form>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>    
     </body>
 </html>
